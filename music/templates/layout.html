@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="style.css" >
+
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Home</title>
+        {% endif %}
+     
+    </head>
+   
+    <body>
+        
+        <div class="header">
+               <form action="/action_page.php">
+              <h1>Search<h1>
+        
+        <div class="form-box">
+            <input type="text" class="search-field music" placeholder="Artist,Song,etc"></input>
+        
+            <select name="song" class="select">
+              <option value="Artists">Artist</option>
+              <option value="Albums">Album</option>
+              <option value="song">Song</option>
+            </select>
+            
+            <input type="submit" class ="submit" value="Submit">
+        </div>
+        </form>
+        </div>
+    </body>
+</html>

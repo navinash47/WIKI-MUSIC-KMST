@@ -1,0 +1,50 @@
+<html>
+            
+            <head>
+                <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <!-- Bootstrap CSS --> 
+            <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" type="text/css"  >
+            <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"  >
+            
+        
+                {% if title %}
+                <title>{{ title }}</title>
+                {% else %}
+                <title>Home</title>
+                {% endif %}
+             
+            </head>
+           
+            <body>
+                <div class="header">
+                    <form name= passdata action="." method="post">
+                        <h1>WIKI MUSIC</h1>
+                        <div class="form-box">
+                            <input type="text" class ="search-field"name="search" placeholder="Artist,Song,etc"></input>
+                            <select name="song" class="select">
+                                <option value="Artists">Artist</option>
+                                <option value="Albums">Album</option>
+                                <option value="song">Song</option>
+                            </select>
+                            <input type="submit" class ="submit" value="Submit">
+                                <h5>Details of Album:</h5>
+                                <h6>Name:&nbsp;&nbsp;{{search}}</h6>
+                            <div class= records>
+                                <h4>List of Albums Of {{search}} done by various Artists :</h4>
+                                <h5>========================================</h5>
+                                {%for r in art %}
+                                <a h="{{r[2]}}"><h6>Artist:{{r[0]}}</h6></a><h6>No of tracks:{{r[1]}}</h6>
+                                <h6>-----------------------------------------</h6>
+                                {%endfor%}
+                                <h5>========================================</h5>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </body>
+        </html>
+     
+    </head>

@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    padding:0;
+}
+.search-field
+{
+    height:50px;
+    padding: 10px;
+    border:black;
+    border-radius:25px;
+    outline:brown;
+}
+.music{
+    width:400px;
+}
+.submit{
+    height:50px;
+    width: 150px;
+    background: #ffeb3b;
+    border: none;
+    color:#000;
+    border-radius:25px;
+}
+.select{
+    height:50px;
+    padding: 10px;
+    background:greenyellow;
+    border:none;
+    border-radius:25px;
+    outline:none;   
+}
+.records{
+    margin: 0px;
+    padding : 0px;
+    font : sans-serif;
+    color:black;
+}
+.tracks{
+    margin: 0px;
+    padding : 0px;
+    font : sans-serif;
+    color: black;
+}
